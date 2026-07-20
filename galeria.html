@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Galería | MIC</title>
+</head>
+<body>
+    <div style="height: 80px;"></div> 
+    <nav id="menu-superior" class="nav-fijo">
+        <ul>
+            <li><a href="index.html#introduccion">INTRODUCCIÓN</a></li>
+            <li><a href="index.html#historia">HISTORIA MIC</a></li>
+            <li><a href="index.html#experiencia">EXPERIENCIA</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">TEORÍAS ▾</a>
+                <ul id="dropdown-menu" class="dropdown-content" style="display: none;">
+                    <li><a href="#teoria-leontiev">⚙️ Leontiev</a></li>
+                    <li><a href="#teoria-freire">🧠 Paulo Freire</a></li>
+                    <li><a href="#teoria-makarenko">👥 Makarenko</a></li>
+                    <li><a href="#teoria-dussel">🌎 Enrique Dussel</a></li>
+                    <li><a href="#teoria-boaventura">🌱 Boaventura</a></li>
+                </ul>
+            </li>
+            <li><a href="galeria.html">GALERÍA</a></li>
+            <li><a href="index.html#reflexion">REFLEXIÓN</a></li>
+        </ul>
+    </nav>
+    <main class="contenido-pagina">
+    <section class="texto-intro">
+        <h2>Galería: Momentos de la experiencia</h2>
+        <p>En esta sección se presentan fotografías tomadas durante la visita al Museo Interactivo de Ciencias, mostrando los espacios recorridos y la interacción con los elementos del museo.</p>
+        <p>Estas imágenes son evidencia del aprendizaje práctico relacionado con nuestras teorías educativas.</p>
+        </section>
+        <div class="album-grid">
+            <img src="img/boaventura.jpeg" class="album-item">
+            <img src="img/dussel.jpeg" class="album-item">
+            <img src="img/experiencia.jpg" class="album-item">
+            <img src="img/freire.jpeg" class="album-item">
+            <img src="img/historia.jpg" class="album-item">
+            <img src="img/inicio_museo.jpg" class="album-item">
+            <img src="img/introduccion.jpg" class="album-item">
+            <img src="img/leontiev.jpeg" class="album-item">
+            <img src="img/makarenko.jpeg" class="album-item">
+            <img src="img/reflexion.jpg" class="album-item">
+            <img src="img/1.jpg" class="album-item">
+            <img src="img/2.jpg" class="album-item">
+            <img src="img/3.jpeg" class="album-item">
+            <img src="img/4.jpg" class="album-item">
+            <img src="img/5.jpg" class="album-item">
+            <img src="img/6.jpeg" class="album-item">
+            <img src="img/7.jpg" class="album-item">
+            <img src="img/8.jpeg" class="album-item">
+            <img src="img/9.jpeg" class="album-item">
+            <img src="img/10.jpeg" class="album-item">
+            <img src="img/12.jpeg" class="album-item">
+            <img src="img/13.jpeg" class="album-item">
+            <img src="img/14.jpeg" class="album-item">
+            <img src="img/15.jpeg" class="album-item">
+            <img src="img/16.jpeg" class="album-item">
+            <img src="img/17.jpeg" class="album-item">
+            <img src="img/18.jpeg" class="album-item">
+            <img src="img/19.jpeg" class="album-item">
+            <img src="img/20.jpeg" class="album-item">
+            <img src="img/21.jpeg" class="album-item">
+            <img src="img/22.jpeg" class="album-item">
+            <img src="img/23.jpeg" class="album-item">
+        </div>
+    </main>
+        <!-- Estructura para el efecto Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        // Función para abrir la imagen
+        document.querySelectorAll('.album-item').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('#lightbox').style.display = 'flex';
+                document.querySelector('#lightbox-img').src = image.src;
+            }
+        });
+    </script>
+</body>
+</html>

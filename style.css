@@ -1,0 +1,202 @@
+/* --- CAMBIOS DE COLOR ELEGANTES --- */
+
+/* 1. Fondo de toda la página (Negro Mate) */
+body {
+    background: #0d0d0d !important; /* Negro sólido elegante */
+    color: #d1cfcf !important; /* Gris suave para mejor lectura */
+}
+
+/* --- 2. PORTADA (ORIGINAL RESTAURADA + COLORES ELEGANTES) --- */
+#portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh;
+    background-color: #000000; /* Fondo negro puro */
+}
+
+.header-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.logo-lateral { width: 90px; height: auto; }
+
+.portada-img {
+    max-width: 500px;
+    margin: 30px auto;
+    border: 3px solid #c5a059; /* Borde dorado original */
+    border-radius: 10px;
+    display: block;
+}
+
+/* Manteniendo tus botones y textos igual para no dañar el diseño */
+#btn-iniciar {
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid #c5a059;
+    color: #c5a059;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#btn-iniciar:hover { 
+    background: #c5a059; 
+    color: #000000; 
+}
+
+/* --- 3. MENÚ SUPERIOR (ESTRUCTURA ORIGINAL + COLORES DE MUSEO) --- */
+#menu-superior {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background: #000000; /* Negro profundo */
+    border-bottom: 2px solid #c5a059; /* Dorado */
+    z-index: 1000;
+}
+
+#menu-superior ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+#menu-superior li a { 
+    display: block; 
+    padding: 20px; 
+    color: #c5a059; /* Dorado */
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#menu-superior li a:hover {
+    color: #ffffff; /* Blanco al pasar el mouse */
+}
+
+/* El dropdown se mantiene con los mismos colores */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    border: 1px solid #c5a059;
+    z-index: 1000;
+    top: 60px;
+}
+
+.dropdown-content li a { 
+    padding: 15px; 
+    border-bottom: 1px solid #333; 
+    display: block; 
+    color: #c5a059; 
+    text-decoration: none;
+}
+
+/* --- 4. CONTENIDO Y SECCIONES --- */
+#main-content { max-width: 900px; margin: 120px auto 50px auto; }
+section {
+    background: #1a1a1a; /* Fondo oscuro para las secciones */
+    color: #e0e0e0;
+    padding: 50px;
+    margin-bottom: 60px;
+    border-radius: 0; /* Bordes rectos para un look más serio */
+    border-left: 4px solid #c5a059; /* El toque dorado elegante */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+h2 {
+    color: #c5a059; /* Dorado */
+    border-bottom: 1px solid #c5a059;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- 5. BLOQUES DE TEORÍAS --- */
+.teoria-card {
+    scroll-margin-top: 90px;
+    background: rgba(139, 69, 19, 0.05);
+    border-left: 5px solid #8b4513;
+    padding: 25px;
+    margin-bottom: 40px; 
+    border-radius: 4px;
+}
+.teoria-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border: 2px solid #8b4513;
+    border-radius: 4px;
+}
+
+/* --- 6. ÁLBUM Y OTROS --- */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 80px auto 40px auto;
+}
+.album-item {
+    width: 100%;
+    height: 200px; 
+    background: #1a1a1a;
+    border: 2px solid #c5a059;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.album-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* Estilo del contenedor del Lightbox */
+.lightbox {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Imagen dentro del Lightbox */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid #c9a063; /* Borde para que combine con tu web */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
